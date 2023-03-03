@@ -1,5 +1,5 @@
-#Capítulo I
-#Conceitos básicos.
+# Capítulo I
+# Conceitos básicos.
 
 # ALGORÍTIMO
 
@@ -28,11 +28,11 @@ input() # O input é utilizado para entrada de dados, para receber alguma inform
 print("Olá, seja bem vindo!") # O print é utilizado para saída de dados, para imprimir algo na tela.
 
 user = input("Informe seu nome: ")
-print("olá," + user + "Como vai?")
+print("olá, " + user + ", Como vai?")
 
 # VARIÁVEIS
 
-# Por quê usar vairáveis?
+# Por quê usar variáveis?
 # O motivo principal de usar variáveis, em qualquer linguagem de programação, é porque elas são uma forma de você ter um lugar para guardar os dados recebidos do seu programa, como suas expressões, cálculos, em um lugar, para que possa ser reutilizado de outra forma, em outro momento. 
 
 velocidademax = 240 # Esse tipo de variável é chamado int, pois apresenta um número inteiro.
@@ -205,7 +205,7 @@ else:
 impostomensal = salario * (aliquota / 100) - deducao
 impostoanual = impostomensal * 12
 
-print("Salário: " + salario)
+print("Salário: " + str(salario))
 print("Alíquota: " + str(aliquota) + "%")
 print("Imposto mensal:" + str(impostomensal))
 print("Imposto anual:" + str(impostoanual))
@@ -267,7 +267,7 @@ x = x + 15
 print (x)
 
 x = 10
-x += 5
+x += 15
 print (x)
 
 # ++ representa incremento;
@@ -285,7 +285,7 @@ x = x * 8 # x *= 8.
 
 valor = float(input("Digite o valor do produto: "))
 
-valor -= (valor * 12/100) # valor = valor - (valor *12/100)
+valor -= (valor * 12/100) # valor = valor - (valor *12 / 100)
 
 print("Valor com desconto: ", valor)
 
