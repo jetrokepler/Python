@@ -12,3 +12,5 @@
 import pandas as pd
 
 # Importando a base de dados.
+
+tabela_vendas = 
