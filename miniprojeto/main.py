@@ -13,4 +13,6 @@ import pandas as pd
 
 # Importando a base de dados.
 
-tabela_vendas = 
+tabela_vendas = pd.read_excel("Miniprojeto\Vendas.xlsx")
+
+print(tabela_vendas)
