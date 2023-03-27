@@ -9,7 +9,7 @@ import time # "Biblioteca do tempo".
 import pandas as pd
 import pyperclip
 
-tabela = pd.read_csv("Projetos\projeto 2\Compras.csv", sep=";") # "sep=';'" serve para separar a tabelas.
+tabela = pd.read_csv("projeto 2\Compras.csv", sep=";") # "sep=';'" serve para separar a tabelas.
 
 print(tabela)
 
