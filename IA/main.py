@@ -1,5 +1,6 @@
 import openai
 import gradio as gr
+from gradio import components
 
 with open("OPENAI_API_KEY.txt") as file:
     openai.api_key = file.read()
@@ -26,15 +27,19 @@ def CustomChatGPT(user_input): #Esse método envia as mensagens acumuladas na li
     messages.append({"role": "assistant", "content": ChatGPT_reply})
     return ChatGPT_reply
 
-demo = gr.Interface(
+descricao_input = "Faça sua pergunta aqui:"
+descricao_output = 'Bot "marketeiro":'
+
+inputs = components.Textbox(label = descricao_input)
+outputs = components.Textbox(label = descricao_output)
+
+link = "https://github.com/jetrokepler/Python/tree/main/IA"
+
+gr.Interface(
     fn = CustomChatGPT, 
-    inputs = "text", 
-    outputs = "text", 
-    title = "Chatbot construido por Jetro Kepler - 2º Informática.", 
-    )
-
-demo.launch(share = True)
-
-generated_code = demo.interface_code()
-
-print(generated_code)
+    inputs = inputs, 
+    outputs = outputs, 
+    title = "Chatbot de negócios construido por Jetro Kepler - 2º Informática.",
+    allow_flagging = "never",
+    description = f"O chatbot foi treinado com o objetivo de fornecer respostas relacionadas a marketing e dicas de negócios. Ele utiliza o modelo GPT-3.5-turbo da OpenAI para gerar respostas com base nas mensagens fornecidas pelo usuário.\nPara mais informações e o código completo, você pode acessar o repositório no GitHub: Link para o Repositório no GitHub: {link}"
+    ).launch(share = True)
