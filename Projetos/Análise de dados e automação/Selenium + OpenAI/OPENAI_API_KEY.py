@@ -1,6 +1,6 @@
 import pickle
 
-openai_api_key = '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'
+openai_api_key = ''
 
 nome_do_arquivo = "OPENAI_API_KEY.pkl"
 
